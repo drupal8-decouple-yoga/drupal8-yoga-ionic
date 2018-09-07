@@ -1,0 +1,36 @@
+h3,
+h4,
+h6,
+p,
+h5,
+{
+    margin: 0;
+    padding: 0;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.steps-list {
+    margin-top: 30px;
+}
+
+h4 {
+    color: cornflowerblue;
+}
+
+h6 {
+    color: darkblue;
+}
+
+p,
+ul,
+li {
+    color: coral;
+}
+
+.tags h6 {
+    color: dodgerblue;
+    text-decoration: underline;
+}

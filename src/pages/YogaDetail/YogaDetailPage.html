@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <h1>Yoga Detail</h1>
+
+
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngFor=" let data of benifits ">
+        <div class="header">
+            <h1>{{data.title}}</h1>
+        </div>
+        <div class="sanskrit_name margin-bottom">
+
+            <h4>Asana Sanskrit Name</h4>
+
+            <h6> {{data.field_asana_sanskrit_name}}
+            </h6>
+
+        </div>
+    </div>
+    <div *ngFor=" let data of stepsdata2 ">
+        <div class="difficulty_level margin-bottom">
+            <h4>Asana Difficulty Level</h4>
+            <h6>{{data.name}}</h6>
+        </div>
+    </div>
+    <div *ngFor=" let data of benifits ">
+        <div class="pronunciation margin-bottom">
+            <h4>Asana Pronunciation</h4>
+            <h6>{{data.field_asana_pronunciation}}</h6>
+        </div>
+
+        <div class="asna_name margin-bottom">
+            <h4>Asana Name</h4>
+            <h6>{{data.field_asana_name}}</h6>
+        </div>
+        <div class="asana_meaning margin-bottom">
+            <h4>Asana Meaning</h4>
+            <h6>
+                <div [innerHTML]="data.field_asana_meaning.value"></div>
+            </h6>
+        </div>
+    </div>
+    <div *ngFor=" let data of stepsdata3 ">
+        <div class="asana_biopic margin-bottom">
+            <h4>Asana Biopic</h4>
+            <h6><img src="https://dev-d8one-yoga-hub.pantheonsite.io/{{data.url}}"></h6>
+        </div>
+    </div>
+
+    <div class="asana_steps margin-bottom">
+        <h4>Asana steps:</h4>
+        <div class="steps-list" *ngFor=" let data of result3 ">
+
+            <h6>Steps: {{data[0]}}</h6>
+
+            <div class="meaning" [innerHTML]="data[1]"></div>
+
+            <h6><img src="{{data[2]}}" /></h6>
+        </div>
+    </div>
+    <div *ngFor=" let data of benifits ">
+        <div class="asana_duration margin-bottom">
+            <h4>Asana Duration Repetition</h4>
+            <h6 [innerHTML]="data.field_asana_duration_repetition.value">
+            </h6>
+        </div>
+
+    </div>
+    <div *ngFor=" let data of benifits ">
+        <div class="asana_benefits margin-bottom">
+            <h4>Asana Benefits</h4>
+            <div [innerHTML]="data.field_asana_benefits.value"></div>
+        </div>
+    </div>
+    <h4>Asana Benefits Tags</h4>
+    <div *ngFor=" let data of stepsdata1 ">
+        <div class="tags">
+            <h6>{{data.name}}</h6>
+        </div>
+    </div>
+</ion-content>

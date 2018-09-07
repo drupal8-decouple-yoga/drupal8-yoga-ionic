@@ -1,0 +1,8 @@
+{
+  "name": "yogaV4",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "e9d48a79"
+}

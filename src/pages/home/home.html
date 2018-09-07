@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <h1>Yoga Home</h1>
+
+
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3>Our Aim is to provide benefits of Yoga to every one for improving mental and physical health</h3>
+    <br/>
+    <br/>
+    <h4 class="head">Yoga Asana Listing</h4>
+    <div class="yogalist">
+        <div class="yoga-card" *ngFor=" let chunk of posts; let i = index">
+            <div class='card'>
+                <div class='card-content' (click)="gotoDetail($event)" id="{{chunk.attributes.uuid}}">
+                    <div class='asana-name bar bar-header bar-calm' block>
+
+                        <label #title class="title"><span>{{chunk.attributes.field_asana_sanskrit_name}}</span></label>
+
+                    </div>
+                    <div>
+                        <img src="https://dev-d8one-yoga-hub.pantheonsite.io/{{chunk.relationships.field_asana_biopic.data.attributes.url}}">
+                    </div>
+                </div>
+                <div class='asana-summary' [innerHTML]="chunk.attributes.field_asana_meaning.value">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<ul *ngFor=" let chunk of posts; let i = index" >
+<li  ion-button block (click)="gotoDetail()">nid- {{chunk.attributes.nid}}</li>
+<li>Title- {{chunk.attributes.title}}</li>
+<li>field_asana_name- {{chunk.attributes.field_asana_name}}</li>
+<li>field_asana_sanskrit_name- {{chunk.attributes.field_asana_sanskrit_name}}</li>
+<li [innerHTML]="chunk.attributes.field_asana_meaning.value"></li>
+<li><img src="https://dev-d8one-yoga-hub.pantheonsite.io/{{chunk.relationships.field_asana_biopic.data.attributes.url}}"></li>
+
+    </ul>
+  -->
+</ion-content>

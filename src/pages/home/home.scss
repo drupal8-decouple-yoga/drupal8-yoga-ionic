@@ -1,0 +1,52 @@
+.yogalist {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    @media screen and (max-width: 900px) {
+        display: block;
+    }
+    .yoga-card {
+        max-width: 580px;
+        width: 100%;
+        padding: 2%;
+        height: 350px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        &:nth-child(2n) {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            @media screen and (max-width: 900px) {
+                margin: 0;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            max-width: 100%;
+            height: auto;
+            border: 0;
+            padding: 0;
+            margin-bottom: 40px !important;
+        }
+        label {
+            cursor: pointer;
+        }
+        img {
+            cursor: pointer;
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            @media screen and (max-width: 900px) {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 20px;
+}
